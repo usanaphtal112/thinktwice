@@ -1,0 +1,10 @@
+{% extends 'components/base.html' %}
+{% block title %}Office Details{% endblock %}
+{% block content %}
+<h1>Office Details</h1>
+
+<p><strong>Name:</strong> {{ office.name }}</p>
+<p><strong>Email:</strong> {{ office.email }}</p>
+
+<a href="{% url 'office_list' %}" class="btn btn-primary">Back to Offices</a>
+{% endblock %}

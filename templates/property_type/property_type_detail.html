@@ -1,0 +1,9 @@
+{% extends 'components/base.html' %}
+{% block title %}Property Type Details{% endblock %}
+{% block content %}
+<h1>Property Type Details</h1>
+
+<p><strong>Name:</strong> {{ property_type.name }}</p>
+
+<a href="{% url 'property_type_list' %}" class="btn btn-primary">Back to Property Types</a>
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends 'components/base.html' %}
+{% block title %}Delete Office{% endblock %}
+{% block content %}
+<h1>Delete Office</h1>
+
+<p>Are you sure you want to delete the office <strong>{{ office.name }}</strong>?</p>
+
+<form method="post">
+    {% csrf_token %}
+    <button type="submit" class="btn btn-danger">Delete</button>
+    <a href="{% url 'office_list' %}" class="btn btn-secondary">Cancel</a>
+</form>
+{% endblock %}

@@ -1,0 +1,187 @@
+body {
+    background-color: #005f7f;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.navbar {
+    background-color: #005f7f;
+    padding: 0.8rem 1rem;
+    box-shadow: 0px 2px 8px rgba(0,0,0,0.15);
+}
+
+.navbar-brand img {
+    height: 50px;
+}
+
+.nav-link {
+    color: white !important;
+    font-weight: bold;
+    margin-right: 1.5rem;
+}
+
+.nav-link:hover {
+    text-decoration: underline;
+}
+
+.navbar .btn-outline-light, .navbar .btn-light {
+    border-radius: 4px;
+    padding: 0.4rem 1.2rem;
+    font-weight: 600;
+}
+
+
+
+
+
+/* Add these styles to your main.css file */
+
+body {
+    background-color: #005f7f;
+    color: #333;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: white;
+}
+
+.search-area {
+    background-color: #0079a1;
+    padding: 3rem 0;
+    margin-bottom: 2rem;
+}
+
+.search-input {
+    width: 80%;
+    padding: 0.75rem;
+    border-radius: 4px 0 0 4px;
+    border: none;
+    font-size: 1rem;
+}
+
+.search-button {
+    background-color: #00a9e0;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0 4px 4px 0;
+}
+
+.register-tabs {
+    margin-top: 2rem;
+}
+
+.register-tabs .nav-link {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.2);
+    margin-right: 0.5rem;
+    border-radius: 4px 4px 0 0;
+    padding: 0.75rem 1.5rem;
+    font-weight: bold;
+}
+
+.register-tabs .nav-link.active {
+    background-color: white;
+    color: #005f7f;
+}
+
+.card {
+    margin-bottom: 2rem;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* ----------------------------- Footer ------------------------------------ */
+
+.footer {
+    background-color: #333333;
+    color: #ffffff;
+    padding: 3rem 0 1rem;
+    font-size: 0.9rem;
+}
+
+.footer h5 {
+    color: #00a9e0;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+    font-size: 1.1rem;
+}
+
+.footer ul {
+    padding-left: 0;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #00a9e0;
+    text-decoration: underline;
+}
+
+.footer .list-unstyled li {
+    margin-bottom: 0.5rem;
+}
+
+.social-icons {
+    margin-top: 1rem;
+}
+
+.social-icons .list-inline-item {
+    margin-right: 1rem;
+}
+
+.social-icons a {
+    font-size: 1.5rem;
+    color: #ffffff;
+    transition: color 0.3s ease;
+}
+
+.social-icons a:hover {
+    color: #00a9e0;
+}
+
+.footer hr {
+    border-color: rgba(255, 255, 255, 0.1);
+    margin: 2rem 0;
+}
+
+.footer-logo {
+    height: 50px;
+    margin-bottom: 1rem;
+}
+
+.footer p {
+    margin-bottom: 0.25rem;
+}
+
+.footer .list-inline {
+    margin-bottom: 0.5rem;
+}
+
+.footer .list-inline-item:not(:last-child) {
+    margin-right: 1.5rem;
+}
+
+.footer .list-inline-item a {
+    font-weight: bold;
+    font-size: 0.8rem;
+}
+
+@media (max-width: 767px) {
+    .footer .text-md-end {
+        text-align: left !important;
+        margin-top: 1rem;
+    }
+}

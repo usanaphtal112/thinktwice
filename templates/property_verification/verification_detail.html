@@ -1,0 +1,37 @@
+{% extends 'components/base.html' %}
+{% block title %}Property Verification Details{% endblock %}
+{% block content %}
+<h1>Property Verification Details</h1>
+
+<p><strong>ID:</strong> {{ verification.id }}</p>
+<p><strong>Property Type:</strong> {{ verification.property_type.name }}</p>
+<p><strong>Property Details:</strong> {{ verification.property_details }}</p>
+<p><strong>Status:</strong> {{ verification.overall_status }}</p>
+<p><strong>Submitted At:</strong> {{ verification.created_at|date:"d M Y" }}</p>
+
+<h2>Office Verifications</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Office</th>
+            <th>Status</th>
+            <th>Verifier</th>
+            <th>Message</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for office_verification in verification.office_verifications.all %}
+        <tr>
+            <td>{{ office_verification.office.name }}</td>
+            <td>{{ office_verification.status }}</td>
+            <td>{{ office_verification.verifier_name }}</td>
+            <td>{{ office_verification.verifier_message }}</td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="4">No office has verified this property yet.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

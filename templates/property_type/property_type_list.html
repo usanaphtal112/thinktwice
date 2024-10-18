@@ -1,0 +1,29 @@
+{% extends 'components/base.html' %}
+{% block title %}Property Types{% endblock %}
+{% block content %}
+<h1>Property Types</h1>
+<a href="{% url 'property_type_create' %}" class="btn btn-primary mb-3">Add New Property Type</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for property_type in property_types %}
+        <tr>
+            <td>{{ property_type.name }}</td>
+            <td>
+                <a href="{% url 'property_type_detail' property_type.id %}" class="btn btn-info btn-sm">Details</a>
+                <a href="{% url 'property_type_delete' property_type.id %}" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="2">No property types have been added yet.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

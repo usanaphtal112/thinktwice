@@ -1,0 +1,31 @@
+{% extends 'components/base.html' %}
+{% block title %}Offices{% endblock %}
+{% block content %}
+<h1>Offices</h1>
+<a href="{% url 'office_create' %}" class="btn btn-primary mb-3">Add New Office</a>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Email</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for office in offices %}
+        <tr>
+            <td>{{ office.name }}</td>
+            <td>{{ office.email }}</td>
+            <td>
+                <a href="{% url 'office_detail' office.id %}" class="btn btn-info btn-sm">Details</a>
+                <a href="{% url 'office_delete' office.id %}" class="btn btn-danger btn-sm">Delete</a>
+            </td>
+        </tr>
+        {% empty %}
+        <tr>
+            <td colspan="3">No offices have been added yet.</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

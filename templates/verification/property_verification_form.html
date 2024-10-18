@@ -1,0 +1,14 @@
+{% extends 'components/base.html' %}
+{% block title %}Verify Property{% endblock %}
+{% block content %}
+<h1>Verify Property</h1>
+<p><strong>Office:</strong> {{ office_verification.office.name }}</p>
+<p><strong>Property Type:</strong> {{ office_verification.property_verification.property_type.name }}</p>
+<p><strong>Details:</strong> {{ office_verification.property_verification.property_details }}</p>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>
+{% endblock %}

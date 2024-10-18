@@ -1,0 +1,11 @@
+{% extends 'components/base.html' %}
+{% block title %}Submit Property Verification{% endblock %}
+{% block content %}
+<h1>Submit Property Verification</h1>
+
+<form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <button type="submit" class="btn btn-success">Submit</button>
+</form>
+{% endblock %}
